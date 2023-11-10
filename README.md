@@ -3,22 +3,22 @@
 Node.js + MongoDB + Express + jQuery + EJS. Weather webapp based on open-source API from Open-Meteo.com
 
 Quick overview (1:23):
-https://github.com/sebastianbrzustowicz/Weather-webapp/assets/66909222/696700cd-f448-4321-b924-5050ce5cbbbc
+https://github.com/sebastianbrzustowicz/Weather-webapp/assets/66909222/8296de53-7e1b-4abd-b7e4-be14a63efe08
 
 Weather tab:
-![Zrzut ekranu 2023-11-10 202431](https://github.com/sebastianbrzustowicz/Weather-webapp/assets/66909222/9de973ff-0e8f-43e8-81cd-fbcc10b94c41)
+![Zrzut ekranu 2023-11-10 202431](https://github.com/sebastianbrzustowicz/Weather-webapp/assets/66909222/4f95d639-a7b9-429c-ac75-ab89ffc58946)
 
 Cities tab:
-![Zrzut ekranu 2023-11-06 220115](https://github.com/sebastianbrzustowicz/Weather-webapp/assets/66909222/ecb768f0-8972-49a8-93b5-51c764b41d6f)
+![image](https://github.com/sebastianbrzustowicz/Weather-webapp/assets/66909222/20be007d-ab3c-44b2-9d28-bf1d782cdba8)
 
 Map tab:
-![Zrzut ekranu 2023-11-06 220142](https://github.com/sebastianbrzustowicz/Weather-webapp/assets/66909222/b027a65c-dd90-462d-8c62-fe1d7330bf9f)
+![image](https://github.com/sebastianbrzustowicz/Weather-webapp/assets/66909222/e08b9ad2-30ef-47a8-9c27-a85d9f73e7db)
 
 Settings tab:
-![Zrzut ekranu 2023-11-10 202213](https://github.com/sebastianbrzustowicz/Weather-webapp/assets/66909222/2225aa8e-a627-46b0-9a92-330c85a79945)
+![Zrzut ekranu 2023-11-10 202213](https://github.com/sebastianbrzustowicz/Weather-webapp/assets/66909222/a26a8d14-e761-419d-aee0-c46ae48be5af)
 
 Login page:
-![Zrzut ekranu 2023-11-10 202232](https://github.com/sebastianbrzustowicz/Weather-webapp/assets/66909222/ec765794-d770-4343-9a1f-d5c7b6963f86)
+![Zrzut ekranu 2023-11-10 202232](https://github.com/sebastianbrzustowicz/Weather-webapp/assets/66909222/bf275c40-4185-4441-b0cd-f26b39a0bf89)
 
 Admin page:
-![Zrzut ekranu 2023-11-10 202308](https://github.com/sebastianbrzustowicz/Weather-webapp/assets/66909222/1ef37689-3934-468d-a1e6-cea47e60e6a1)
+![Zrzut ekranu 2023-11-10 202308](https://github.com/sebastianbrzustowicz/Weather-webapp/assets/66909222/97eab492-d94d-41eb-9359-1908decd9b02)
