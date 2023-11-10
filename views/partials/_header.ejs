@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="description" content="Weather webapp" />
+  <meta charset="utf-8">
+  <title>Weather app</title>
+  <link rel="icon" href="/images/weather-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Sebastian">
+  <link rel="stylesheet" href="/stylesheets/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+  <link rel="stylesheet" href="/stylesheets/main.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  
+</head>
+
+<body>
+
+<script>
+//creating basic settings if not existing
+if (localStorage.getItem('setting0')===null){
+    localStorage.setItem("setting0", "°C")
+}
+if (localStorage.getItem('setting1')===null){
+    localStorage.setItem("setting1", "km/h")
+}
+if (localStorage.getItem('setting2')===null){
+    localStorage.setItem("setting2", "mm")
+}
+</script>
+
+<a href="/" class="_header"><p style="display: inline; position: relative; top: -10px; color: white;">Weather</p>
+  <img style="width: min(20vw, 110px);height: min(18vw, 90px);" src="/images/weather-icon.png">
+</a>

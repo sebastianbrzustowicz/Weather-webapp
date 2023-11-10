@@ -1,0 +1,46 @@
+<%- include("partials/_header") %>
+
+<div class="main-card" style="height: auto; min-height: 800px; max-height: None;">
+  <div class="innerAdmin" style="height: auto; min-height: 740px; max-height: None; padding-bottom: 30px;">
+    <div style="width: 70%;text-align: center; margin: 15px auto 15px auto; font-size: 25px; opacity: 40%">Feedback</div>
+    <form class="logout-button" action='/users/logout' method='get'>
+      <input type="image" class="logout-img" id="logout-icon" src="/images/logout.png">
+    </form>
+    
+    <div class="container adminTableHeader">
+      <div>ID</div>
+      <div>Email</div>
+      <div>Feedback</div>
+      <div>Action</div>
+    </div>
+
+    <div id="feedbacks">  
+    <% for(var i=0; i<data.length; i++) {%>
+      <div class="container adminTableValues">
+        <div id="MessageID-<%= i %>" style="width: 20%; text-align: center;"><%= data[i]._id %></div>
+        <div style="width: 20%; text-align: center;"><%= data[i].email %></div>
+        <div style="width: 20%; text-align: center;"><%= data[i].message %></div>
+        <div style="width: 20%; text-align: center;">
+
+        <button type="submit" style="background-color: rgb(12,20,28);width: 40px; height: 40px ;margin: auto; border-radius: 10px;">
+          <a href="/users/admin/delete/<%= data[i]._id %>"><img class="delete-icon" src="/images/delete.png" alt="Submit Form" border="0" /></a>
+        </button>
+
+        </div>
+      </div>
+    <% } %>
+    </div>
+
+  </div>
+</div>
+
+<script>
+var messagesAmount = "<%= data.length %>";
+//console.log(x)
+
+
+</script>
+
+<script type="module" src="/js/admin.js"></script>
+
+<%- include("partials/_footer") %>

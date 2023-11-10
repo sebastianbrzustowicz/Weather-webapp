@@ -1,0 +1,103 @@
+<%- include("partials/_header") %>
+
+<div class="main-card">
+  
+  <div class="left-child-card">
+    <a href="/tabs/weather" style="text-decoration: none; background-color: none;"><div class="left-tab"><img class="img-tab" src="/images/weather-tab.png">Weather</div></a>
+    <a href="/tabs/cities" style="text-decoration: none; background-color: none;"><div class="left-tab"><img class="img-tab" src="/images/cities-tab.png">Cities</div></a>
+    <a href="/tabs/map" style="text-decoration: none; background-color: none;"><div class="left-tab" style="opacity: 100%"><img class="img-tab" src="/images/map-tab.png">Map</div></a>
+    <a href="/tabs/settings" style="text-decoration: none; background-color: none;"><div class="left-tab"><img class="img-tab" src="/images/settings-tab.png">Settings</div></a>
+  </div>
+  
+  <div class="middle-child-card">
+    <div class="search-child-card">
+      <form onsubmit="
+      if (localStorage.getItem('city4') !== null) {localStorage.setItem('city5', localStorage.getItem('city4'));}
+      if (localStorage.getItem('city3') !== null) {localStorage.setItem('city4', localStorage.getItem('city3'));}
+      if (localStorage.getItem('city2') !== null) {localStorage.setItem('city3', localStorage.getItem('city2'));}
+      if (localStorage.getItem('city1') !== null) {localStorage.setItem('city2', localStorage.getItem('city1'));}
+      if (localStorage.getItem('city0') !== null) {localStorage.setItem('city1', localStorage.getItem('city0'));}
+      localStorage.setItem('city0', document.getElementById('searchbarID').value);
+      localStorage.removeItem('latitude');
+      localStorage.removeItem('longitude');" 
+      style="display: inline-block;">
+        <input type="text" name="searchbar" id="searchbarID" class="searchbar" autocomplete="off" placeholder="Search for cities" autofocus>
+      </form>
+      <div style="float: right; margin-top: 7px; margin-right: 15px; cursor: pointer;" onclick="getLocation()"><img style="width: 35px; height: auto;" id="gps" src="/images/gps.png"></div>
+    </div>
+    
+    <div class="map" id="mapID"></div>
+  
+  </div>
+
+  <div class="right-child-card">
+    <div class="text-faded" style="width: 100%;">YOUR POSITION FORECAST</div>
+
+    <div style="position: relative; top: 40px; left: 20px;">
+        
+      <div class="widget-child-card">
+        <div style="float:left; margin-left: 15px;">
+          <h1 id="data-city" style="display: inline-block;"></h1>&nbsp;<h1 id="data-country" style="display: inline-block;"></h1>
+          <p class="text-faded" style="position: relative; top: -20px; left: 0px;" id="data-map-precip"></p>
+          <p style="font-size: 50px" id="data-map-currentTemp"></p>
+
+        </div>
+        <div style="position:absolute; top: 150px; right:70px"><img class="img-widget" id="data-map-currentIcon" src="/images/blank.png"></div>
+      </div>
+      <hr id="map-horizontal-line" style="width: 90%; position:absolute; right: 40px;top:300px; opacity:40%;">
+      <div style="position: absolute; top: 350px; left: 15px; width: 200px;">
+        <div style="display: inline-block; position:absolute; left:20px">
+          <div>
+            <div style="display: inline-block;">
+              <img class="img-conditions" src="/images/temperature.png">
+            </div>
+            <div style="display: inline-block;">
+              <p style="opacity: 40%;">Real Feel</p>
+              <p style="font-size: 17px; margin-bottom: 0px;" id="data-map-realFeel">&nbsp;</p>
+            </div>
+          </div><br><br>
+          <div>
+            <div style="display: inline-block;">
+              <img class="img-conditions" src="/images/drop.png">
+            </div>
+            <div style="display: inline-block;">
+              <p style="opacity: 40%;">Precipitation</p>
+              <p style="font-size: 17px; margin-bottom: 0px;" id="data-map-precipCondition">&nbsp;</p>
+            </div>
+          </div>
+        </div>
+        
+        <div style="display: inline-block; position:absolute; left:220px; width: 200px;">
+          <div>
+            <div style="display: inline-block;">
+              <img class="img-conditions" src="/images/wind.png">
+            </div>
+            <div style="display: inline-block;">
+              <p style="opacity: 40%;">Wind</p>
+              <p style="font-size: 17px; margin-bottom: 0px;" id="data-map-wind">&nbsp;</p>
+            </div>
+          </div><br><br>
+          <div>
+            <div style="display: inline-block;">
+              <img class="img-conditions" src="/images/snowfall.png">
+            </div>
+            <div style="display: inline-block;">
+              <p style="opacity: 40%;">Snowfall</p>
+              <p style="font-size: 17px; margin-bottom: 0px;" id="data-map-snowfall">&nbsp;</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    
+    </div>
+
+  </div>
+
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOVYRIgupAurZup5y1PRh8Ismb1A3lLao"></script>
+<script type="module" src="/js/map.js"></script>
+<script src="/js/getlocation.js"></script>
+
+<%- include("partials/_footer") %>
