@@ -10,7 +10,7 @@ npm init -y
 
 npm i express ejs axios mongoose express-session
 ```
-Also u can install this package for faster preview:
+You can also install this package for a faster preview:
 ```
 npm i --save-dev nodemon
 ```
