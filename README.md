@@ -1,6 +1,6 @@
 # Weather-webapp
 
-Node.js + MongoDB + Express + jQuery + EJS. Weather webapp based on open-source API from Open-Meteo.com
+Node.js + Rest API + MongoDB + Express + jQuery + EJS. Weather webapp based on open-source API from Open-Meteo.com
 
 # Installation
 
